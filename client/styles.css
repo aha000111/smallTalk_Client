@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto Flex", sans-serif;
+}
+body {
+  --smallTalk-primaryColor: #08a1e4;
+  --smallTalk-secondaryColor: #0a065c;
+  --smallTalk-tertiaryColor: #ff66c4;
+  --smallTalk-background: #e6ecf0;
+}
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  color: var(--smallTalk-secondaryColor);
+}
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.side-icon {
+  text-align: center;
+}
+.sidebarOption:not(:last-child) {
+  margin-bottom: 5px;
+}
+.sidebarOption:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.sidebarOption,
+.fa-twitter {
+  padding: 10px;
+}
+
+.sidebarOption h2 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.sidebarOption:hover {
+  background-color: var(--smallTalk-background);
+  border-radius: 30px;
+
+  transition: color 100mms ease-out;
+}
+
+.sidebar_speak {
+  width: 100%;
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 30px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+.sidebar {
+  border-right: 1px solid var(--smallTalk-background);
+  flex: 0.2;
+  min-width: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.feed {
+  flex: 0.6;
+  border-right: 1px solid var(--smallTalk-background);
+  min-width: 600px;
+  overflow-y: scroll;
+}
+
+.feed_header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  z-index: 100;
+  border: 1px solid var(--smallTalk-background);
+  padding: 25px 20px;
+}
+/* 
+.feed_header h2 {
+  font-size: 20;
+  font-weight: 800;
+} */
+
+.feed::-webkit-scrollbar {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.feed {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* tweet box */
+
+.tweetbox_input img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.tweetBox {
+  padding-bottom: 10px;
+  border-bottom: 8px solid var(--smallTalk-background);
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#form {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px #e6ecf0;
+}
+.tweetbox_input {
+  display: flex;
+  padding: 20px;
+}
+
+.tweetbox_input input {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.tweetBox_tweetButton {
+  background-color: var(--smallTalk-primaryColor);
+  border: solid 1px var(--smallTalk-secondaryColor);
+  color: var(--smallTalk-secondaryColor);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 80px;
+  height: 40px;
+  margin-top: 40px;
+  /* margin-left: 40px;  */
+  justify-self: center;
+  transition: all 0.2s;
+}
+
+.tweetBox_tweetButton:hover {
+  transform: translateY(-3px);
+}
+
+/* Styling Post */
+
+.post_avatar img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--smallTalk-background);
+  padding-bottom: 10px;
+  max-width: 700px;
+}
+
+.post_body img {
+  width: 450px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.post_footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.post_badge {
+  font-size: 14px !important;
+  color: var(--smallTalk-color);
+  margin-right: 5px;
+}
+
+.post_headerSpecial {
+  font-weight: 800;
+  font-size: 12px;
+  color: gray;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--smallTalk-secondaryColor);
+}
+
+.post_headerDescription {
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.post_body {
+  flex: 1;
+  padding: 10px;
+}
+
+.post_avatar {
+  padding: 20px;
+}
+
+.postFlex {
+  display: flex;
+  border-bottom: 1px solid var(--smallTalk-background);
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.material-icons {
+  padding: 2px;
+  flex-basis: 30%;
+  background-color: white;
+  border: solid 1px var(--smallTalk-tertiaryColor);
+  border-radius: 10px;
+  color: var(--smallTalk-primaryColor);
+  transition: all 0.3s;
+}
+.material-icons:not(:last-child) {
+  margin-right: 5px;
+}
+
+.material-icons:hover {
+  background-color: var(--smallTalk-primaryColor);
+  border: solid 1px var(--smallTalk-secondaryColor);
+  color: var(--smallTalk-secondaryColor);
+}
+
+.postComments {
+  padding: 2px;
+}
+.commentsHeader {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.commentList {
+  list-style-type: none;
+  margin-left: 10px;
+}
+.commentList > li {
+  font-size: 16px;
+  padding: 2px;
+}
+.commentList > li::before {
+  content: "--  ";
+  padding: 1px;
+}
+
+.reactionContainer {
+  display: flex;
+  justify-content: center;
+  min-width: 150px;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.reactionCounter {
+  flex-basis: 33%;
+  text-align: center;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.gifimg {
+  width: 200px;
+  height: 200px;
+}
+
+.commentForm {
+  flex-direction: row;
+  display: flex;
+  column-gap: 8px;
+  margin-top: 40px;
+}
+
+.commentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 8px;
+}
+
+.postComments {
+  flex-basis: 100%;
+}
+.commentBoxStyle {
+  width: 180px;
+  padding: 2px;
+  text-indent: 4px;
+  font-size: 12px;
+  border: solid 1px #0a065c;
+  border-radius: 5px;
+  height: 30px;
+  flex-basis: 80%;
+}
+.commentBoxStyle:focus {
+  border: none;
+}
+.gifCommentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 8px;
+}
+
+.commentFormBtn {
+  padding: 5px;
+  background-color: white;
+  border: solid 1px var(--smallTalk-tertiaryColor);
+  border-radius: 10px;
+  color: var(--smallTalk-primaryColor);
+  transition: all 0.3s;
+}
+.commentFormBtn:nth-child(2) {
+  margin-right: 5px;
+}
+.commentFormBtn:hover {
+  background-color: var(--smallTalk-primaryColor);
+  color: var(--smallTalk-secondaryColor);
+  border: solid 1px var(--smallTalk-secondaryColor);
+}
